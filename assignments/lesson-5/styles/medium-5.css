@@ -40,6 +40,7 @@ nav button {
     display:none; 
 }  /* hamburger button does not need to be shown */
     
+/*
     nav ul 
 {
     list-style-type: none;
@@ -49,10 +50,13 @@ nav button {
     color: #aeceff;
     background-color: #2c4d7f;
 }
+*/
 
 nav  
 {
-    display: inline;
+    
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
     width: 100%;
     margin: 0 25px 0 25px;
@@ -60,6 +64,10 @@ nav
     padding: 0;
     
 }
+    
+    nav a {
+        width: 16%;
+    }
 
 nav a:link {
     display: inline;
@@ -95,6 +103,12 @@ nav a:active {
 section.forecast { 
     display: block; 
 }
+    
+    
+    table th, td{
+        border: #7f7f7f solid 1px;
+        margin: 0;
+    }
         
     h3 {
     text-align: center;
@@ -139,6 +153,15 @@ section .conditions {
 
 
   
-article p.town-article img { width: 62.666%; float:right; }  /* responsive images */
+/*article p.town-article img { width: 62.666%; float:left; }   responsive images */
+    
+ article {
+        display: flex;
+        flex-direction: row;
+    }
 
+    article p.town-article img {
+        padding-top: 50px;
+    }
+    
 }

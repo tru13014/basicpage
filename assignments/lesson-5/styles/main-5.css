@@ -90,6 +90,8 @@ section, h3, highlow, current, conditions {
 table {
     margin: auto;
     color: #2c4d7f;
+    border: solid #2c4d7f 1.5px;
+    margin-bottom: 30px;
 }
 
 thead {
@@ -100,9 +102,11 @@ tbody {
     text-align: center;
 }
 
-article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
-  width: ???; /* fill the page in the small/phone view */
-  margin: ???;
+article p.town-article img {  
+    /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+  width: 50%; 
+    /* fill the page in the small/phone view */
+  margin: auto;
 }
 footer {
     text-align: center;
