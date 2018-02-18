@@ -1,0 +1,171 @@
+@media only screen and (min-width: 37.5em) {
+    
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+    
+/*
+@media only screen 
+  and (min-device-width: 500px) 
+  and (max-device-width: 800px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+}
+    
+*/
+header h1 {
+    margin-top: -100px;
+    margin-left: 225px;
+}
+    
+header .subheading {
+    margin-top: -20px;
+    margin-left: 225px;
+    margin-bottom: 50px;
+}
+
+    
+/*
+body {
+    margin: 20px;
+    max-width: 950px;
+    margin: auto;
+    align-content: center;
+    }
+*/
+
+  
+nav {
+    display: inline;
+}
+    
+nav button {
+    display:none; 
+}  
+    
+/* hamburger button does not need to be shown */
+    
+    nav ul 
+{
+    list-style-type: none;
+    margin: 20px 0 0 25px;
+    padding: 0;
+    width: 200px;
+    color: #aeceff;
+    background-color: #2c4d7f;
+}
+
+nav  
+{
+    
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+    margin: 0 25px 0 25px;
+    padding: 8px 16px;
+    padding: 0;
+    
+}
+    
+nav a {
+        width: 16%;
+    }
+
+nav a:link {
+    display: inline;
+    color: #aeceff;
+    background-color: #2c4d7f;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+    
+nav a:visited {
+    color: #aeceff;
+    background-color: #4980d4;
+    text-decoration-line: none;
+}
+
+nav a:hover {
+    background-color: #7f7f7f;
+    color: #aeceff;
+    text-decoration: none;
+}
+
+nav a:active {
+    color: #7f7f7f;
+    background-color: #aeceff;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-line: 10px;
+    text-decoration-color: #2c4d7f;
+}
+    
+
+#summary {
+    border: none;
+}
+
+
+section .highlow {
+    color: #aeceff;
+    text-align: center;
+    background-color: #7f7f7f; 
+    padding: 5px;
+}
+
+section .current {
+    color: #2c4d7f;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+    
+picture {
+    align-self: center;
+}
+
+section .conditions {
+    color: #aeceff;
+    text-align: center;
+    background-color: #7f7f7f;
+    background-size: contain;
+    padding: 5px;
+    
+}
+
+section.forecast { 
+    display: block; 
+}
+    
+    
+    table th, td{
+        border: #7f7f7f solid 1px;
+        margin: 0;
+    }
+        
+    h3 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+  
+/*article p.town-article img { width: 62.666%; float:left; }   responsive images */
+    
+ article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    article p.town-article img {
+        padding-top: 50px;
+        width: 33%;
+        margin: auto;
+    }
+    
+}
