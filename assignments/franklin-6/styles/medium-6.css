@@ -1,4 +1,4 @@
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 35rem) {
     
   /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
     
@@ -21,83 +21,69 @@ header .subheading {
     margin-bottom: 50px;
 }
 
-    
-/*
-body {
-    margin: 20px;
-    max-width: 950px;
-    margin: auto;
-    align-content: center;
-    }
-*/
-
   
+/*
 nav {
     display: inline;
 }
+*/
+    
+/* hamburger button does not need to be shown */
     
 nav button {
     display:none; 
 }  
-    
-/* hamburger button does not need to be shown */
-    
-    nav ul 
-{
-    list-style-type: none;
-    margin: 20px 0 0 25px;
-    padding: 0;
-    width: 200px;
-    color: #aeceff;
-    background-color: #2c4d7f;
-}
-
+ 
 nav  
-{
-    
+{ 
+    color: #aeceff;
     display: flex;
     flex-direction: row;
     text-decoration: none;
     width: 100%;
-    margin: 0 25px 0 25px;
+    margin: 0;
     padding: 8px 16px;
     padding: 0;
-    
 }
     
-nav a {
-        width: 16%;
-    }
-
-nav a:link {
-    display: inline;
+    nav ul li
+{
+    list-style-type: none;
+    width: 165px;
     color: #aeceff;
     background-color: #2c4d7f;
-    padding: 16px 16px;
-    text-decoration: none;
-}
-    
-nav a:visited {
-    color: #aeceff;
-    background-color: #4980d4;
-    text-decoration-line: none;
 }
 
-nav a:hover {
-    background-color: #7f7f7f;
-    color: #aeceff;
-    text-decoration: none;
-}
 
-nav a:active {
-    color: #7f7f7f;
-    background-color: #aeceff;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-line: 10px;
-    text-decoration-color: #2c4d7f;
-}
     
+    
+/* medium nav bar */
+    
+    nav button { display: none;}  
+    
+    nav ul.hide {
+        color: #aeceff;
+        display: inline-flex;
+        background-color: #2c4d7f;
+    }
+    
+    nav ul {
+        color: #aeceff;
+        margin-left: 0;
+    }
+    
+    nav ul li {
+        color: #aeceff;
+        float: left;
+    }
+    
+    nav ul li a {
+        color: #aeceff; 
+        border: none;
+        border-right: 1px solid rgba(0,0,0,0.3);
+        padding: .8rem 1rem;
+        
+    }
 
 #summary {
     border: none;
@@ -108,7 +94,7 @@ section .highlow {
     color: #aeceff;
     text-align: center;
     background-color: #7f7f7f; 
-    padding: 5px;
+    padding: 2px;
 }
 
 section .current {
@@ -136,7 +122,7 @@ section .conditions {
     text-align: center;
     background-color: #7f7f7f;
     background-size: contain;
-    padding: 5px;
+    padding: 2px;
     
 }
 
@@ -169,3 +155,4 @@ section.forecast {
     }
     
 }
+

@@ -20,7 +20,7 @@ head
         .burger-nav{
             display: block;
             height: 40px;
-            widows: 100%;
+            width: 100%;
             background: url(images/burger.png) no-repeat 98% center;
             background-color: #2c4d7f;
             cursor: pointer;
@@ -39,6 +39,7 @@ body {
   font-family: 'Almendra', sans-serif;
   
 }
+
 
 main { /* the comma means apply the following CSS declarations to all of the listed elements */
   /* Declare the maximum width and other main element rules to limit the stretch on wide views */
@@ -63,40 +64,58 @@ header .subheading {
     margin-bottom: 40px;
 }
 
-/*Burger menu button*/
+/*Burger menu button code &#9776; */
 
-header nav ul{
-    overflow: hidden;
-    background: #aeceff;
-    height: 0;
-}
-
-header nav ul.open{
-    height: auto;
-}
-
-header nav ul li{
-    float: none;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-}
-
-header nav ul li a{
-    color: #7f7f7f;
-    padding: 10px;
-    border-bottom: 1px solid #a3ceff;
-    display: block;
-    margin: 0;
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #2c4d7f;
 }
 
 nav {
-    display: none;
-    text-align: center;
+    background-color: #aeceff;
+    font-family: arial, sans-serif;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
 
-/*nav button {}*/
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    color: #aeceff;
+    text-decoration: none;
+    border-color: #7f7f7f;
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+
+nav ul li a;link{
+    color: #aeceff;
+    background-color: #7f7f7f;
+}
+
+nav ul li a:hover {
+    color: #aeceff;
+    background-color: #2c4d7f;
+}
+
+nav ul li a:active {
+    color: #aeceff;
+    background-color: #589aff;
+}
+
+nav ul.hide {
+    color: #aeceff;
+    display: block;}
+
+/*end of nav*/
+
 
 main {}
 main h2 {}
@@ -158,14 +177,31 @@ aside {
     padding: 16px 16px;
 }
 
-footer-bar {
+footer-bar p {
     text-align: center;
     font-size: 14px;
+    color: #aeceff;
     line-height: 20px;
+    background-color: #2c4d7f;
+    margin: 0;
+    padding: .5rem;
 }
 
-/*footer .p {*/
-   
-} /* This structure refers to p elements that are direct children of the footer element */
+a:link {
+    color: #589aff;
+    text-decoration: underline;
+}
 
-/* Other Class Selectors */
+a:visited {
+    color: #7f7f7f;
+    text-decoration: none;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

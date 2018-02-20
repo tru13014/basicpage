@@ -7,34 +7,34 @@
     
   <title>The Weather Wizard - Home</title>
     
-  <meta name="author" content="Your Name Here">
+  <meta name="author" content="Marlene Trujillo">
   <meta name="description" content="page description placeholder">
     
-  <!-- external style references in the proper cascading order -->    
-    <link href="https://fonts.googleapis.com/css?family="Ramaraja"" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css?family="Almendra"" rel="stylesheet">
+  <!-- external style references in the proper cascading order --> 
     
     <!-- Google API font reference -->
     
-  <link href="styles/normalize.css" rel="stylesheet"> 
-    <!-- normalize useragent/browser defaults -->
+    <link href="https://fonts.googleapis.com/css?family="Ramaraja"" rel="stylesheet">
     
-  <link href="styles/main-6.css" rel="stylesheet">    
-    <!-- default styles - small/phone views -->
+    <link href="https://fonts.googleapis.com/css?family="Almendra"" rel="stylesheet">
+        
     
-  <link href="styles/medium-6.css" rel="stylesheet">  
-    <!-- medium/tablet views -->
-    
-  <link href="styles/large-6.css" rel="stylesheet">   
-    <!-- large/wide/desktop views -->
+      <link href="styles/normalize.css" rel="stylesheet"> 
+        <!-- normalize useragent/browser defaults -->
+
+      <link href="styles/main-6.css" rel="stylesheet">    
+        <!-- default styles - small/phone views -->
+
+      <link href="styles/medium-6.css" rel="stylesheet">  
+        <!-- medium/tablet views -->
+
+      <link href="styles/large-6.css" rel="stylesheet">   
+        <!-- large/wide/desktop views -->
     
   <style type="text/css" media="screen">
     </style>
     
 </head>
-    
-
     
 <body>
 
@@ -50,22 +50,22 @@
 
 <!--Hamburger menu-->
 
-<!--<a class="burger-nav"></a>   -->
+<a class="burger-nav"></a>    
     
-<!--Hamburger menu-->
-    
- <a class="burger-nav"></a>    
-    
-    <nav class="nav">
+    <nav class="clearfix">
         
-        <a class="nav-item" href="franklin-6.html">Home</a>
-        <a class="nav-item" href="franklin-6.html">Franklin</a>
-        <a class="nav-item" href="franklin-6.html">Springfield</a>
-        <a class="nav-item" href="franklin-6.html">Greenville</a>
-        <a class="nav-item" href="franklin-6.html">Storm Center</a>
-        <a class="nav-item" href="franklin-6.html">Gallery</a>
-    </nav>
-
+        <button onclick="toggleMenu()">&#9776;</button>
+        
+        <ul id="primaryNav" class="hide">
+            <li><a href="franklin-6.html">Home</a></li>
+            <li class="nav-item"><a href="franklin-6.html">Franklin</a></li>
+            <li><a href="franklin-6.html">Springfield</a></li>
+            <li><a href="franklin-6.html">Greenville</a></li>
+            <li><a href="franklin-6.html">Storm Center</a></li>
+            <li><a href="franklin-6.html">Gallery</a></li>
+        </ul>
+    </nav>    
+    
   <main>
       
     <h2>The City of Franklin</h2>
@@ -174,6 +174,7 @@
         contact@theurl.com<br>
         
     </aside>
+    </footer>
       
     <footer-bar>
       
@@ -186,9 +187,6 @@
           document.write(fullDate);
         </script>
         </p>
-          
-          
-<!--          <span id="spanDate"></span></p> -->
         
       </footer-bar>
       
@@ -196,8 +194,7 @@
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script src="franklin-6.js"></script>
     
-  <script src="scripts/spanDate.js"></script>
-      
+  <script src="scripts/spanDate.js"></script>   
 
 </body>
     
