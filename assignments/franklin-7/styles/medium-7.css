@@ -1,0 +1,146 @@
+@media only screen and (min-width: 35rem) {
+    
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+    
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+ 
+    * {
+        box-sizing: border-box;
+    }
+    
+header h1 {
+    margin-top: -100px;
+    margin-left: 225px;
+}
+    
+header .subheading {
+    margin-top: -20px;
+    margin-left: 225px;
+    margin-bottom: 50px;
+}
+
+  
+/* hamburger button does not need to be shown */
+    
+nav button {
+    display: none; 
+}  
+    
+    
+/* medium nav bar */
+    
+    .hide-nav  {
+        display:  flex;  
+    } 
+
+    nav {
+        
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: auto;
+    }
+    
+    nav ul li {
+        width: 16.67%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        margin-left: auto;
+    }
+    
+
+#summary {
+    border: none;
+}
+
+
+section .highlow {
+    color: #aeceff;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #7f7f7f; 
+    padding: 2px;
+}
+
+section .current {
+    color: #2c4d7f;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+    
+picture {
+    align-self: center;
+}
+
+section .conditions {
+    color: #aeceff;
+    text-align: center;
+    background-color: #7f7f7f;
+    background-size: contain;
+    padding: 2px;
+    
+}
+
+section.forecast { 
+    display: block;
+    font-size: 1.2em;
+}
+    
+    
+    table th, td{
+        border: #7f7f7f solid 1px;
+        margin: 0;
+    }
+        
+    h3 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+    
+    #windchill {
+    border: solid #7f7f7f 5px;
+    border-width: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#output {
+    color: #2c4d7f;
+    margin-bottom: 10px;
+}
+  
+/*article p.town-article img { width: 62.666%; float:left; }   responsive images */
+    
+ article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    article p.town-article img {
+        padding-top: 50px;
+        width: 33%;
+        margin: auto;
+    }
+    
+}
