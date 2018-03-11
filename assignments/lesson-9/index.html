@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Weather Wizard - Home</title>
+
+    <meta name="author" content="Marlene Trujillo">
+    <meta name="description" content="page description placeholder">
+
+    <!-- external style references in the proper cascading order -->
+
+    <!-- Google API font reference -->
+
+    <link href="http://fonts.googleapis.com/css?family=Ramaraja" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Almendra" rel="stylesheet" type="text/css">
+
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- normalize useragent/browser defaults -->
+
+    <link href="styles/main-8.css" rel="stylesheet">
+    <!-- default styles - small/phone views -->
+
+    <link href="styles/medium-8.css" rel="stylesheet">
+    <!-- medium/tablet views -->
+
+    <link href="styles/large-8.css" rel="stylesheet">
+    <!-- large/wide/desktop views -->
+
+    <style type="text/css" media="screen">
+        <SCRIPT LANGUAGE="JavaScript">
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="images/franklin-logo-final.png" width="200" alt="Logo image">
+        </div>
+        <div>
+            <h1>The Weather Wizard</h1>
+            <div class="subheading">Bringing you the Magic of Forecast.</div>
+        </div>
+    </header>
+
+
+    <nav class="clearfix" class="container">
+
+        <button onclick="toggleMenu()">&#9776;</button>
+
+        <ul id="nav-ul" class="hide-nav">
+            <li class="navItem"><a href="index.html">Home</a></li>
+            <li class="navItem"><a href="franklin-8.html">Franklin</a></li>
+            <li class="navItem"><a href="franklin-8.html">Springfield</a></li>
+            <li class="navItem"><a href="franklin-8.html">Greenville</a></li>
+            <li class="navItem"><a href="stormcenter.html">Storm Center</a></li>
+            <li class="navItem"><a href="gallery.html">Gallery</a></li>
+        </ul>
+        
+    </nav>
+
+    <main>
+        
+        <h2>"Spring Forward" This Weekend</h2>
+
+        <p>
+            Most of the country will begin Daylight Time Shifting on Sunday at 2:00 a.m., so remember to "Spring Forward" before going to bed on Saturday, by making sure your clocks spring forward from 2:00 a.m. to 3:00 a.m. We will lose an hour of sleep on Sunday, so ensure to update your alarms.<br>
+            Also, a kind reminder from the fire department, it is recommended to change the batteries in your smoke detectors and to provide the safety that a working smoke detector gives to your family: more than double the chances or surviving a fire.
+        </p>
+        
+        <figure class="franklin">
+            <img src="images/timeforward.jpeg" alt="Spring Time Forward" class="responsive" class="center">
+            <figcaption>Photo credit: pexels.com</figcaption>
+            
+        </figure>
+
+        
+    </main>
+
+    <footer>
+
+        <aside>
+            <b>The Weather Wizard</b><br> 123 Main St.<br> Franklin, MU 83454<br> (999) 999-9999 <br> contact@theurl.com
+            <br>
+
+        </aside>
+
+
+        <p class="footer-bar">&copy;2017 All Rights Reserved | The Weather Wizard | <a href="https://www.contractology.com/free-website-terms-and-conditions.html">Terms of Use</a> | <span id='date'></span>
+        </p>
+
+
+    </footer>
+
+
+    <script src="scripts/hamburger.js"></script>
+
+    <script src="scripts/current-date.js"></script>
+
+    <script src="scripts/windchill.js"></script>
+
+</body>
+
+</html>

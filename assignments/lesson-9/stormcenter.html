@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Weather Wizard - Home</title>
+
+    <meta name="author" content="Marlene Trujillo">
+    <meta name="description" content="page description placeholder">
+
+    <!-- external style references in the proper cascading order -->
+
+    <!-- Google API font reference -->
+
+    <link href="http://fonts.googleapis.com/css?family=Ramaraja" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Almendra" rel="stylesheet" type="text/css">
+
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- normalize useragent/browser defaults -->
+
+    <link href="styles/main-8.css" rel="stylesheet">
+    <!-- default styles - small/phone views -->
+
+    <link href="styles/medium-8.css" rel="stylesheet">
+    <!-- medium/tablet views -->
+
+    <link href="styles/large-8.css" rel="stylesheet">
+    <!-- large/wide/desktop views -->
+
+    <style type="text/css" media="screen">
+        <SCRIPT LANGUAGE="JavaScript">
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="images/franklin-logo-final.png" width="200" alt="Logo image">
+        </div>
+        <div>
+            <h1>The Weather Wizard</h1>
+            <div class="subheading">Bringing you the Magic of Forecast.</div>
+        </div>
+    </header>
+
+
+    <nav class="clearfix" class="container">
+        
+        <button onclick="toggleMenu()">&#9776;</button>
+
+        <ul id="nav-ul" class="hide-nav">
+            <li class="navItem"><a href="index.html">Home</a></li>
+            <li class="navItem"><a href="franklin-8.html">Franklin</a></li>
+            <li class="navItem"><a href="franklin-8.html">Springfield</a></li>
+            <li class="navItem"><a href="franklin-8.html">Greenville</a></li>
+            <li class="navItem"><a href="stormcenter.html">Storm Center</a></li>
+            <li class="navItem"><a href="gallery.html">Gallery</a></li>
+        </ul>
+        
+    </nav>
+
+    <main>
+      
+        <h1>Storm Center</h1>
+        <form id="stormCenter" action="thanks.html" method="get" enctype="multipart/form-data" name="stormReport">
+            <fieldset>
+                <legend>
+                    <span>Personal Information</span>
+                </legend>
+                
+                <label>
+                    <span>
+                        Full Name:
+                        <input name="fullName" value="" placeholder="First and last name" pattern="[a-zA-Z -]{5,40}" required="" type="text">
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Email:
+                        <input name="email" value="" placeholder="youremail@email.com" type="email">
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Phone:
+                        <input name="phone" value="" placeholder="555-555-5555" pattern="[0-9]{10,11}" required="" type="tel">
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Zip code:
+                        <input name="zip" value="" placeholder="12345" required="" type="zip">
+                    </span>
+                </label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>
+                    <span>Storm Information</span>
+                </legend>
+                
+                <label>
+                    <span>
+                        Storm date:
+                        <input name="stormDate" value="" required="" type="date">
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Storm type:
+                        <input name="stormType" value="" placeholder="Select from menu..." list="stormType" type="text">
+                        <datalist id="stormType">
+                            <option value="Flash Flood"></option>
+                            <option value="Hail"></option>
+                            <option value="Hurricane"></option>
+                            <option value="Thunderstorm"></option>
+                            <option value="Tornado"></option>
+                        </datalist>
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Storm severity:
+                        <input class="rating" name="stormseverity" value="5" min="1" max="10" step="1" oninput="adjustrating(this.value)" onchange="adjustrating(this.value)" type="range">
+                        <span id="rating" class="rating">5</span>
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Storm Region:
+                        <select name="region">
+                            <option selected="" disabled="">Select region</option>
+                            <option value="franklin">Franklin</option>
+                            <option value="springfield">Springfield</option>
+                            <option value="greenville">Greenville</option>
+                        </select>
+                    </span>
+                </label>
+                
+                <label>
+                    Are you in danger?<br>
+                    
+                    <span class="radio">
+                        <input class="radio" name="userdanger" value="yes" required="" type="radio">Yes<br>
+                        <input class="radio" name="userdanger" value="notsure" required="" type="radio">Maybe<br>
+                        <input class="radio" name="userdanger" value="no" required="" type="radio">No<br>
+                    </span>
+                </label>
+                
+                <label>
+                    <span>
+                        Additional Information:
+                        <textarea name="additionalinfo" rows="4" cols="35"></textarea>
+                    </span>
+                </label>
+                
+            </fieldset>
+            
+                <input class="submitbtn" value="Submit" type="submit">
+                <input name="redirect" value="thanks.html" type="hidden">
+            
+        </form>
+        
+    </main>
+
+    <footer>
+
+        <aside>
+            <b>The Weather Wizard</b><br> 123 Main St.<br> Franklin, MU 83454<br> (999) 999-9999 <br> contact@theurl.com
+            <br>
+
+        </aside>
+
+
+        <p class="footer-bar">&copy;2017 All Rights Reserved | The Weather Wizard | <a href="https://www.contractology.com/free-website-terms-and-conditions.html">Terms of Use</a> | <span id='date'></span>
+        </p>
+
+
+    </footer>
+
+
+    <script src="scripts/hamburger.js"></script>
+
+    <script src="scripts/current-date.js"></script>
+
+    <script src="scripts/windchill.js"></script>
+    
+    <script src="scripts/stormRating.js"></script>
+
+</body>
+
+</html>
