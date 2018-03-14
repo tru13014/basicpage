@@ -153,6 +153,10 @@ main {}
 
 main h2 {}
 
+.new h2 {
+    text-align: center;
+}
+
 main figure {
     margin: 0 0 .2rem 2%;
     width: 96%;
@@ -223,7 +227,6 @@ tbody {
     margin-bottom: 10px;
 }
 
-article h3 {}
 
 article p.town-article img {
     /* This structure refers to img elements that are the posterity of paragraph elements within article elements */
@@ -389,6 +392,31 @@ a:hover.thanks{
 
 /*---------- Thanks page ends ----------*/
 
+.center{
+}
+
+
+main section.jsondata {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main article {
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #2c4d7f;
+    margin: 5px;
+    grid-column: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+
+/*---------- Index page ends ---------*/
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 
@@ -397,3 +425,13 @@ a:hover.thanks{
     display: table;
     clear: both;
 }
+
+#townArticle{
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+#left{
+    text-align: left;
+}
+
