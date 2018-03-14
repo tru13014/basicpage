@@ -22,13 +22,13 @@
     <link href="styles/normalize.css" rel="stylesheet">
     <!-- normalize useragent/browser defaults -->
 
-    <link href="styles/main-8.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
     <!-- default styles - small/phone views -->
 
-    <link href="styles/medium-8.css" rel="stylesheet">
+    <link href="styles/medium.css" rel="stylesheet">
     <!-- medium/tablet views -->
 
-    <link href="styles/large-8.css" rel="stylesheet">
+    <link href="styles/large.css" rel="stylesheet">
     <!-- large/wide/desktop views -->
 
     <style type="text/css" media="screen">
@@ -57,9 +57,9 @@
 
         <ul id="nav-ul" class="hide-nav">
             <li class="navItem"><a href="index.html">Home</a></li>
-            <li class="navItem"><a href="franklin-8.html">Franklin</a></li>
-            <li class="navItem"><a href="franklin-8.html">Springfield</a></li>
-            <li class="navItem"><a href="franklin-8.html">Greenville</a></li>
+            <li class="navItem"><a href="franklin.html">Franklin</a></li>
+            <li class="navItem"><a href="franklin.html">Springfield</a></li>
+            <li class="navItem"><a href="franklin.html">Greenville</a></li>
             <li class="navItem"><a href="stormcenter.html">Storm Center</a></li>
             <li class="navItem"><a href="gallery.html">Gallery</a></li>
         </ul>
@@ -67,6 +67,72 @@
     </nav>
 
     <main>
+        
+        <div class="new">
+            <h2>
+                General Information
+            </h2>
+        </div>
+        
+        <section>
+             
+        </section>
+        
+        
+<!--    JSON Data begins    -->
+        
+        
+      <script>
+        
+        
+        var section = document.querySelector('section');
+        var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function() {
+            var stats = request.response;
+            populateHeader(weatherSummary);
+            showStats(stats);
+        }
+
+        function populateHeader(jsonObj) {
+            var myH3 = document.createElement('h3');
+            myH3.textContent = jsonObj['name'];
+            header.appendChild(myH3);
+            var myPara = document.createElement('p');
+            myPara.textContent = 'name ' + jsonObj['motto'] + ' // Formed: ' + jsonObj['yearFounded'];
+            header.appendChild(myPara);
+        }
+
+        function showStats(jsonObj) {
+            var towns = jsonObj['name'];
+            for (var i = 0; i < heroes.length; i++) {
+                var myArticle = document.createElement('article');
+                var myH3 = document.createElement('h3');
+                var myPara1 = document.createElement('p');
+                var myPara2 = document.createElement('p');
+                myPara1.textContent = 'Current population: ' + towns[i].currentPopulation;
+                myPara2.textContent = 'Average rainfall: ' + towns[i].averageRainfall;
+                var superPowers = heroes[i].powers;
+                for (var j = 0; j < superPowers.length; j++) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = superPowers[j];
+                    myList.appendChild(listItem);
+                }
+                myArticle.appendChild(myH3);
+                myArticle.appendChild(myPara1);
+                myArticle.appendChild(myPara2);
+                section.appendChild(myArticle);
+            }
+        }
+
+    </script>  
+        
+        
+<!--JSON Data ends   -->
+        
         
         <h2>"Spring Forward" This Weekend</h2>
 
