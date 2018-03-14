@@ -4,7 +4,7 @@
 
 var weatherObject = new XMLHttpRequest();
 
-weatherObject.open('GET', 'http://api.wunderground.com/api/d22a413415370da9/conditions/q/MN/Franklin.json', true );
+weatherObject.open('GET', 'https://api.wunderground.com/api/d22a413415370da9/conditions/q/MN/Franklin.json', true );
 
 weatherObject.send();
 
