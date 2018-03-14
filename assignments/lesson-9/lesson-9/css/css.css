@@ -1,0 +1,59 @@
+/*@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condense');*/
+
+* {
+    font-family: Ubuntu, sans-serif;
+}
+
+thead {
+    font-size: 1.5em;
+    background-color: #7fb9c2;
+}
+
+tfoot {
+    font-size: .75em;
+    background-color: #7fb9c2;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: .5px solid #ccc;
+    border-collapse: collapse;
+    width: 275px;
+    background-color: #e7f0ed;
+    box-shadow: 10px 10px 20px #628ca6;
+}
+
+td {
+    font-weight: 100px;
+    font-size: .9em;
+}
+
+td, th {
+    border: .5px solid #ccc;
+    width: 275px;
+    text-align: center;
+    padding: 5px;
+}
+
+tbody th {
+    background-color: #628ca6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.novGoal {
+    background-color: #628ca6;
+    color: #fff;
+}
+/*
+
+tbody tr:nth-child(6) :nthchild(1) {
+    font-style: italic;
+}
+*/
+
+tbody tr:nth-child(odd){
+    background-color: #e7ffed;
+}
