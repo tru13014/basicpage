@@ -19,7 +19,7 @@ weatherObject.onload = function() {
     
     document.getElementById('w_icon').src = weatherInfo.current_observation.icon_url;
     
-    document.getElementById('feels').innerHTML = weatherInfo.current_observation.feelslike_f;
+    document.getElementById('feels').innerHTML = weatherInfo.current_observation.feelslike_string;
     
     document.getElementById('wLogo').src = weatherInfo.current_observation.image.url;
     
