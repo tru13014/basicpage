@@ -1,0 +1,426 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* {
+    box-sizing: border-box;
+}
+
+/* This wildcard applies to all elements ensuring a box layout model */
+
+head {
+    font-family: "Ramaraja", serif;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #2c4d7f;
+}
+
+table td {
+    border: 1px solid #2c4d7f;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
+
+    .burger-nav {
+        display: block;
+        height: 40px;
+        width: 100%;
+        background: url(images/burger.png) no-repeat 98% center;
+        background-color: #2c4d7f;
+        cursor: pointer;
+    }
+}
+
+and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+body {
+    margin: 20px 20px;
+    font-size: 16px;
+    /* Declare the base font-family - from google font api or other */
+    font-family: "Almendra", sans-serif;
+}
+
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+}
+
+#wLogo {
+    width: 3rem;
+}
+
+/*
+main figure.franklin {
+    width: 100%;
+    margin: 2% 2% 0 0;
+}
+
+main figure.franklin img {
+    width: 100%;
+}
+*/
+
+header {
+    display: flex;
+}
+
+header h1 {
+    color: #2c4d7f;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+header img {}
+
+header .subheading {
+    color: #2c4d7f;
+    font-size: 1.2em;
+    padding-top: 0;
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+header h1,
+h2,
+h3 {
+    font-family: 'Ramaraja', serif;
+}
+
+
+/*--- Burger menu button code &#9776; ---*/
+
+nav button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #2c4d7f;
+    margin-top: 10px;
+    margin-left: 90%;
+}
+
+nav {
+    font-family: "Almendra", serif;
+    text-decoration: none;
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+.container {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+nav ul li a {
+    margin-left: -40px;
+    display: block;
+    padding: .8rem 2%;
+    color: #aeceff;
+    text-decoration: none;
+    border-color: #7f7f7f;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a:link {
+    color: #aeceff;
+    background-color: #2c4d7f;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #aeceff;
+    background-color: #7f7f7f;
+    text-decoration: none;
+}
+
+nav ul li a:active {
+    color: #aeceff;
+    background-color: #589aff;
+    text-decoration: none;
+}
+
+
+
+.hide-nav {
+    display: none;
+}
+
+/*--- End of nav ---*/
+
+main {}
+
+main h2 {}
+
+.new h2 {
+    text-align: center;
+}
+
+main figure {
+    margin: 0 0 .2rem 2%;
+    width: 96%;
+}
+
+main figure img {
+    width: 100%;
+}
+
+
+figcaption {
+    font-size: 10px;
+    color: #7f7f7f;
+}
+
+#livedata {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+        text-align: center;
+        background: #aeceff;
+        width: 100%;
+        margin: 5px 5px 10px 0px;
+        padding-left: 10px;
+    }
+
+.forecast {
+    display: none;
+}
+
+table {
+    margin: auto;
+    color: #2c4d7f;
+    border: solid #2c4d7f 2px;
+    margin-bottom: 30px;
+}
+
+thead {
+    text-align: center;
+}
+
+tbody {
+    text-align: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+#townArticle{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+#left p{
+    text-align: left;
+    width: 100%;
+}
+
+#right figure{
+    width: auto;
+    align-items: center;
+}
+
+article p.town-article img {
+    /* This structure refers to img elements that are the posterity of paragraph elements within article elements */
+    width: 33%;
+    /* fill the page in the small phone view */
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    color: #aeceff;
+    background-color: #2c4d7f;
+    padding-bottom: 5px;
+}
+
+aside {
+    text-align: center;
+    color: #2c4d7f;
+    background-color: #aeceff;
+    padding: 16px 16px;
+}
+
+footer a {
+    color: #aeceff;
+    text-decoration: underline;
+}
+
+footer-bar p {
+    text-align: center;
+    font-size: 14px;
+    color: #aeceff;
+    line-height: 20px;
+    background-color: #2c4d7f;
+    margin: 0;
+    padding: .5rem;
+}
+
+/*---------- Gallery page begins ----------*/
+
+.gallery p {
+    color: #2c4d7f;
+}
+
+.gallery img:hover {
+    border: solid 1px black;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: black;
+    border-left-color: black;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image-source: none;
+    border-image-slice: 100%;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch stretch;
+    box-shadow: 10px 10px 10px black;
+}
+
+/*---------- Gallery page ends ----------*/
+
+
+/*---------- Storm Center page begins ----------*/
+
+form{
+    font-size: 1rem;
+    margin: .5rem;
+}
+fieldset{
+    padding: .8rem;
+    margin-bottom: 1rem;
+}
+label{
+    display: block;
+    padding: .75rem;
+}
+input{
+    display: block;
+    padding-bottom: .5rem;
+}
+textarea{
+    display: block;
+    width: 100%;
+}
+span.rating, input.rating{
+    display: inline-block;
+    margin-right: 1rem;
+    align-self: center;
+}
+input.rating{
+    margin-top: .75rem;
+}
+input.radio{
+    display: inline-block;
+    margin: .25rem .5rem 1rem .5rem;
+}
+input.submitbtn{
+    color: #ffffff;
+    width: auto;
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin: 1rem 0rem;
+    background: #2c4d7f;
+    box-shadow: 2px 2px 10px #7f7f7f;
+}
+
+a.submitbtn {
+    text-decoration: none;
+}
+
+/*---------- Storm Center page ends ----------*/
+
+
+/*---------- Thanks page begins ----------*/
+
+h1.thanks {
+    text-align: center;
+    color: #2c4d7f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: dotted 2px #2c4d7f;
+    border-bottom: dotted 2px #2c4d7f;
+    
+}
+
+.flexcontainer {
+    display: inline;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    }
+
+.flexcontainer {
+    width: 10%;
+    align-content: center;
+}
+
+.thanks {
+    text-align: center;
+    padding-bottom: 20px;  
+}
+
+/*
+a.thanks{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover.thanks{
+    color: #999999;
+}
+*/
+
+/*---------- Thanks page ends ----------*/
+
+.center{
+}
+
+
+main section.jsondata {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main article {
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #2c4d7f;
+    margin: 5px;
+    grid-column: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+
+/*---------- Index page ends ---------*/
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Weather Wizard - Franklin, MN</title>
+
+    <meta name="author" content="Marlene Trujillo">
+    <meta name="description" content="page description placeholder">
+
+    <!-- external style references in the proper cascading order -->
+
+    <!-- Google API font reference -->
+
+    <link href="http://fonts.googleapis.com/css?family=Ramaraja" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Almendra" rel="stylesheet" type="text/css">
+
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- normalize useragent/browser defaults -->
+
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- default styles - small/phone views -->
+
+    <link href="styles/medium.css" rel="stylesheet">
+    <!-- medium/tablet views -->
+
+    <link href="styles/large.css" rel="stylesheet">
+    <!-- large/wide/desktop views -->
+
+
+    <style type="text/css" media="screen">
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="images/franklin-logo-final.png" width="200" alt="Logo image">
+        </div>
+        <div>
+            <h1>The Weather Wizard</h1>
+            <div class="subheading">Bringing you the Magic of Forecast.</div>
+        </div>
+    </header>
+
+
+    <nav class="clearfix" class="container">
+
+        <button onclick="toggleMenu()">&#9776;</button>
+
+        <ul id="nav-ul" class="hide-nav">
+            <li class="navItem"><a href="index.html">Home</a></li>
+            <li class="navItem"><a href="franklin.html">Franklin</a></li>
+            <li class="navItem"><a href="springfield.html">Springfield</a></li>
+            <li class="navItem"><a href="greenville.html">Greenville</a></li>
+            <li class="navItem"><a href="stormcenter.html">Storm Center</a></li>
+            <li class="navItem"><a href="gallery.html">Gallery</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+        <div id="livedata">
+
+            <h3>Weather for <span id="place">City, State</span><br><img id="w_icon" src="" alt="current weather"></h3>
+
+            <p>Current Temperature: <span id="currentTemp">90</span>&deg;<br>
+            Feels like <span id="feels">95</span>&deg;<br>
+<!--            High: <span id="hight">99</span>&deg;&nbsp &#8226; &nbsp Low: <span id="lowt">70</span>&deg;<br>-->
+            Windchill factor: <span id="windchill">95</span>&deg;</p>
+
+            <p><img id="wLogo" src="" alt="WU Logo"></p>
+
+        </div>
+
+        <section class="forecast">
+
+            <h3>10 Day Forecast</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day 1</th>
+                        <th>Day 2</th>
+                        <th>Day 3</th>
+                        <th>Day 4</th>
+                        <th>Day 5</th>
+                        <th>Day 6</th>
+                        <th>Day 7</th>
+                        <th>Day 8</th>
+                        <th>Day 9</th>
+                        <th>Day 10</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>89&deg;F</td>
+                        <td>87&deg;F</td>
+                        <td>78&deg;F</td>
+                        <td>75&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>72&deg;F</td>
+                        <td>79&deg;F</td>
+                        <td>83&deg;F</td>
+                        <td>85&deg;F</td>
+                        <td>89&deg;F</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+        
+        <div id="intro">
+        
+            <figure class="franklin">
+                <img src="images/franklin-medium.jpeg" alt="Franklin picture" class="responsive" class="center">
+                <figcaption></figcaption>
+            </figure>
+        
+        </div>
+
+        <div id="introPara">
+            
+            <h2>The City of Franklin</h2>
+
+            <p>
+                St. Valentine’s Day will have plenty of weather to love, but a few snow-covered bouquets and heart boxes could affect romantic moods. Cupids won’t need a jacket, in fact, lovers could stroll in short-sleeves throughout the city of Franklin, Greenville and Springfield. Highs will reach into the 70s and, in some places, 80s. A few showers are possible in the south of Greenville and Springfield.
+            </p>
+            
+        </div>
+
+<!--
+                <section id="summary">
+
+            <h3>Weather Summary</h3>
+
+            <div class="highlow">
+                <p>High: <span id="h">57</span>&#8457;; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Low: <span id="l">39</span>&#8457;</p>
+            </div>
+
+            <div class="current">
+
+                <picture>
+                    <img src="images/sunny.jpg" alt="Picture of the sun" width="75"><br>
+                    <b>Sunny</b>
+                </picture>
+            </div>
+
+            <div class="conditions">
+                <p>Precipitation: &nbsp &nbsp &nbsp &nbsp Wind Speed:<br> &nbsp &nbsp <b>0&#37;</b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp
+                    <b><span id="s">18</span>mph</b></p>
+            </div>
+        </section>
+        
+        <form id="windchill">
+
+            <h1>Windchill Calculator</h1>
+
+            <button type="button" onclick="computeFactor()">Click to get Windchill</button> <br> <br>
+
+            <span id="result"> </span>℉
+
+        </form>
+-->
+
+        <article id="townArticle">
+
+            <div id="left">
+                <h3>Franklin Breaks Record</h3>
+                <p class="town-article">
+                    Sun and temperatures over 70&deg;F brought up a new record-braking Winter in the city of Franklin. What was expected to be a chilli, snow-filled winter, has turned into an early Spring showcase - minus the flowers. The valley is green, residents are enjoying outdoor activities, and the winds are just a comfortable breeze. For the city of Franklin, this has been the hottest Winter in over fifty years!
+                </p>
+            </div>
+
+            <div id="right">
+                <figure>
+                    <img src="images/town%20picture.jpeg" alt="Town picture" class="responsive" class="center">
+                    <figcaption>Photo credit www.pexels.com</figcaption>
+                </figure>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+
+        <aside>
+            <b>The Weather Wizard</b><br> 123 Main St.<br> Franklin, MN 55333<br> (507) 999-9999 <br> contact@theurl.com
+            <br>
+
+        </aside>
+
+
+        <p class="footer-bar">&copy;2017 All Rights Reserved | The Weather Wizard | <a href="https://www.contractology.com/free-website-terms-and-conditions.html">Terms of Use</a> | <span id='date'></span>
+        </p>
+
+
+    </footer>
+    <script src="scripts/wu-weather.js"></script>
+
+    <script src="scripts/hamburger.js"></script>
+
+    <script src="scripts/current-date.js"></script>
+
+    <script src="scripts/windchill.js"></script>
+
+</body>
+    
+    
+    
+<script>
+    // remember to add an ID of "mainmenu" to the nav ul
+    var urlString = document.location.href;
+    var urlArray = urlString.split('/');
+    var pageHREF=urlArray[urlArray.length-1];
+    
+    if (pageHREF !=="") {
+        var menu = document.querySelectorAll('ul#nav-ul li a');
+        var i;
+        //loop through all the menu items in the navigation
+        for(i=0; i<menu.length; i++) {
+            var currentURL=(menu[i].getAttribute("href"));
+            menu[i].parentNode.className=""; // turn off highlighting by default
+            if (currentURL===pageHREF) {
+                menu[i].parentNode.className="active"; // turn on if a match
+        } // end if
+    } // end of the search for a match
+    } // end of if !==
+</script>
+    
+    
+
+</html>
