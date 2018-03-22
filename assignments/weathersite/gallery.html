@@ -157,6 +157,24 @@
     <script src="scripts/current-date.js"></script>
 
     <script src="scripts/windchill.js"></script>
+    
+    <script>
+        var urlString, urlArray, pageHREF, menu, i, currentURL;
+        urlString = document.location.href;
+        urlArray = urlString.split('/');
+        pageHREF = urlArray[urlArray.length - 1];
+        if (pageHREF !== "") {
+            menu = document.querySelectorAll('ul#nav-ul li a');
+            for (i = 0; i < menu.length; i++) {
+                currentURL = (menu[i].getAttribute('href'));
+                menu[i].parentNode.className = '';
+                if (currentURL === pageHREF) {
+                    menu[i].parentNode.className = 'active';
+                }
+            }
+        }
+
+    </script>
 
 </body>
 

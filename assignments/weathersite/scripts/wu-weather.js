@@ -27,3 +27,28 @@ weatherObject.onload = function() {
     
 
 } // end of onload
+
+// 10 DAY Forecast Table
+
+var forecastObj = new XMLHttpRequest();
+
+forecastObj.open('GET', 'https://api.wunderground.com/api/d22a413415370da9/forecast10day/q/MN/Franklin.json', true);
+
+forecastObj.send();
+
+forecastObj.onload = function () {
+
+    var weatherTen = JSON.parse(forecastObj.responseText).forecast.simpleforecast.forecastday;
+    console.log(weatherTen);
+
+    var tbody = document.querySelector("tbody");
+    var tr = document.createElement("tr");
+
+    for (var i = 0; i < weatherTen.length; i++) {
+        console.log(weatherTen[i]);
+        var td = document.createElement("td");
+        td.textContent = weatherTen[i].high.fahrenheit + '\u00B0' + 'F';
+        tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+}

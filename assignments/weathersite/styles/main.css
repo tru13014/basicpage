@@ -85,6 +85,7 @@ header h1,
 h2,
 h3 {
     font-family: 'Ramaraja', serif;
+    text-align: center;
 }
 
 
@@ -165,7 +166,7 @@ main figure {
 }
 
 main figure img {
-    width: 100%;
+    width: 75%;
 }
 
 
@@ -206,10 +207,25 @@ tbody {
     text-align: center;
 }
 
-.intro {
+#index {
+    float: center;
+}
+
+#mainArticle {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: none;
+}
+
+#mainArticle figure{
+    text-align: center;
+    width: 100%;
+}
+
+#mainArticle p {
+    width: 100%;
+    text-align: left;
+    float: right;
 }
 
 #townArticle{
@@ -219,11 +235,11 @@ tbody {
 }
 #left p{
     text-align: left;
-    width: 100%;
+    width: auto;
 }
 
 #right figure{
-    width: auto;
+    width: 100%;
     align-items: center;
 }
 
@@ -401,6 +417,7 @@ main section.jsondata {
     justify-content: center;
 }
 
+
 main article {
     border-radius: 15px;
     padding: 10px;
@@ -409,10 +426,10 @@ main article {
     margin: 5px;
     grid-column: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
-    grid-row-gap: 5px;
-    grid-column-gap: 5px;
+    grid-template-columns: ;
+    grid-gap: 0px;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
 }
 
 /*---------- Index page ends ---------*/

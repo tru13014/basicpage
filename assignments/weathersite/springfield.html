@@ -33,6 +33,8 @@
 
 
     <style type="text/css" media="screen">
+
+
     </style>
 
 </head>
@@ -71,10 +73,9 @@
 
             <h3>Weather for <span id="place">City, State</span><br><img id="w_icon" src="" alt="current weather"></h3>
 
-            <p>Current Temperature: <span id="currentTemp">90</span>&deg;<br>
-            Feels like <span id="feels">95</span>&deg;<br>
-<!--            High: <span id="hight">99</span>&deg;&nbsp &#8226; &nbsp Low: <span id="lowt">70</span>&deg;<br>-->
-            Windchill factor: <span id="windchill">95</span>&deg;</p>
+            <p>Current Temperature: <span id="currentTemp">90</span>&deg;<br> Feels like <span id="feels">95</span>&deg;<br>
+                <!--            High: <span id="hight">99</span>&deg;&nbsp &#8226; &nbsp Low: <span id="lowt">70</span>&deg;<br>-->
+                Windchill factor: <span id="windchill">95</span>&deg;</p>
 
             <p><img id="wLogo" src="" alt="WU Logo"></p>
 
@@ -101,81 +102,42 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>89&deg;F</td>
-                        <td>87&deg;F</td>
-                        <td>78&deg;F</td>
-                        <td>75&deg;F</td>
-                        <td>72&deg;F</td>
-                        <td>72&deg;F</td>
-                        <td>79&deg;F</td>
-                        <td>83&deg;F</td>
-                        <td>85&deg;F</td>
-                        <td>89&deg;F</td>
-                    </tr>
+                    <!-- json info 10day forecast-->
                 </tbody>
 
             </table>
 
         </section>
         
-        <div id="intro">
+        <h2>The City of Springfield</h2>
         
+        <article id="mainArticle">
+
+<!--        <div id="intro">-->
+
             <figure class="franklin">
-                <img src="images/original-springfield.jpeg" alt="Springfield picture" class="responsive" class="center">
+                <img src="images/medium-springfield.jpeg" height="225" alt="Springfield picture" class="responsive" class="center">
                 <figcaption>Photo credit: pexels.com</figcaption>
             </figure>
-        
+
+<!--
         </div>
 
         <div id="introPara">
-            
-            <h2>The City of Springfield</h2>
+-->
 
             <p>
                 St. Valentine’s Day will have plenty of weather to love, but a few snow-covered bouquets and heart boxes could affect romantic moods. Cupids won’t need a jacket, in fact, lovers could stroll in short-sleeves throughout the city of Springfield. Highs will reach into the 70s and, in some places, 80s. A few showers are possible in the south of Springfield.
             </p>
-            
-        </div>
 
-<!--
-                <section id="summary">
+        </article>
 
-            <h3>Weather Summary</h3>
-
-            <div class="highlow">
-                <p>High: <span id="h">57</span>&#8457;; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Low: <span id="l">39</span>&#8457;</p>
-            </div>
-
-            <div class="current">
-
-                <picture>
-                    <img src="images/sunny.jpg" alt="Picture of the sun" width="75"><br>
-                    <b>Sunny</b>
-                </picture>
-            </div>
-
-            <div class="conditions">
-                <p>Precipitation: &nbsp &nbsp &nbsp &nbsp Wind Speed:<br> &nbsp &nbsp <b>0&#37;</b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp
-                    <b><span id="s">18</span>mph</b></p>
-            </div>
-        </section>
-        
-        <form id="windchill">
-
-            <h1>Windchill Calculator</h1>
-
-            <button type="button" onclick="computeFactor()">Click to get Windchill</button> <br> <br>
-
-            <span id="result"> </span>℉
-
-        </form>
--->
+        <h2>Springfield Breaks Record</h2>
 
         <article id="townArticle">
 
             <div id="left">
-                <h3>Springfield Breaks Record</h3>
+                
                 <p class="town-article">
                     Sun and temperatures over 70&deg;F brought up a new record-braking Winter in the city of Springfield. What was expected to be a chilli, snow-filled winter, has turned into an early Spring showcase - minus the flowers. The valley is green, residents are enjoying outdoor activities, and the winds are just a comfortable breeze. For the city of Springfield, this has been the hottest Winter in over fifty years!
                 </p>
@@ -211,8 +173,25 @@
 
     <script src="scripts/current-date.js"></script>
 
-<!--    <script src="scripts/windchill.js"></script>-->
+    <!--    <script src="scripts/windchill.js"></script>-->
 
+    <script>
+        var urlString, urlArray, pageHREF, menu, i, currentURL;
+        urlString = document.location.href;
+        urlArray = urlString.split('/');
+        pageHREF = urlArray[urlArray.length - 1];
+        if (pageHREF !== "") {
+            menu = document.querySelectorAll('ul#nav-ul li a');
+            for (i = 0; i < menu.length; i++) {
+                currentURL = (menu[i].getAttribute('href'));
+                menu[i].parentNode.className = '';
+                if (currentURL === pageHREF) {
+                    menu[i].parentNode.className = 'active';
+                }
+            }
+        }
+
+    </script>
 </body>
 
 </html>

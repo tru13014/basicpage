@@ -52,7 +52,7 @@
 
 
     <nav class="clearfix" class="container">
-        
+
         <button onclick="toggleMenu()">&#9776;</button>
 
         <ul id="nav-ul" class="hide-nav">
@@ -63,39 +63,39 @@
             <li class="navItem"><a href="stormcenter.html">Storm Center</a></li>
             <li class="navItem"><a href="gallery.html">Gallery</a></li>
         </ul>
-        
+
     </nav>
 
     <main>
-      
+
         <h1>Storm Center</h1>
         <form id="stormCenter" action="thanks.html" method="get" enctype="multipart/form-data" name="stormReport">
             <fieldset>
                 <legend>
                     <span>Personal Information</span>
                 </legend>
-                
+
                 <label>
                     <span>
                         Full Name:
                         <input name="fullName" value="" placeholder="First and last name" pattern="[a-zA-Z -]{5,40}" required="" type="text">
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Email:
                         <input name="email" value="" placeholder="youremail@email.com" type="email">
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Phone:
                         <input name="phone" value="" placeholder="555-555-5555" pattern="[0-9]{10,11}" required="" type="tel">
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Zip code:
@@ -103,19 +103,19 @@
                     </span>
                 </label>
             </fieldset>
-            
+
             <fieldset>
                 <legend>
                     <span>Storm Information</span>
                 </legend>
-                
+
                 <label>
                     <span>
                         Storm date:
                         <input name="stormDate" value="" required="" type="date">
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Storm type:
@@ -129,7 +129,7 @@
                         </datalist>
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Storm severity:
@@ -137,7 +137,7 @@
                         <span id="rating" class="rating">5</span>
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Storm Region:
@@ -149,7 +149,7 @@
                         </select>
                     </span>
                 </label>
-                
+
                 <label>
                     Are you in danger?<br>
                     
@@ -159,21 +159,21 @@
                         <input class="radio" name="userdanger" value="no" required="" type="radio">No<br>
                     </span>
                 </label>
-                
+
                 <label>
                     <span>
                         Additional Information:
                         <textarea name="additionalinfo" rows="4" cols="35"></textarea>
                     </span>
                 </label>
-                
+
             </fieldset>
-            
-                <input class="submitbtn" value="Submit" type="submit">
-                <input name="redirect" value="thanks.html" type="hidden">
-            
+
+            <input class="submitbtn" value="Submit" type="submit">
+            <input name="redirect" value="thanks.html" type="hidden">
+
         </form>
-        
+
     </main>
 
     <footer>
@@ -197,9 +197,25 @@
     <script src="scripts/current-date.js"></script>
 
     <script src="scripts/windchill.js"></script>
-    
-    <script src="scripts/stormRating.js"></script>
 
+    <script src="scripts/stormRating.js"></script>
+    <script>
+        var urlString, urlArray, pageHREF, menu, i, currentURL;
+        urlString = document.location.href;
+        urlArray = urlString.split('/');
+        pageHREF = urlArray[urlArray.length - 1];
+        if (pageHREF !== "") {
+            menu = document.querySelectorAll('ul#nav-ul li a');
+            for (i = 0; i < menu.length; i++) {
+                currentURL = (menu[i].getAttribute('href'));
+                menu[i].parentNode.className = '';
+                if (currentURL === pageHREF) {
+                    menu[i].parentNode.className = 'active';
+                }
+            }
+        }
+
+    </script>
 </body>
 
 </html>
